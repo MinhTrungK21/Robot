@@ -224,8 +224,8 @@ Chỉ bánh xe:  Walk ─► Docking ─► Charging ─► Undocking ─► Wal
 
 ### Quy trình đi cơ bản
 
-1. Idle → **vào Prepare** (L1 + ⚠️) → robot chạm đất, ngẩng đầu.
-2. **Đứng dậy** (L1 + ⚠️) → robot từ từ đứng vào trạng thái `Walk` (mặc định ở chế độ đất bằng).
+1. Idle → **vào Prepare** (**L1 + ○**) → robot chạm đất, ngẩng đầu.
+2. **Đứng dậy** (**L1 + △**) → robot từ từ đứng vào trạng thái `Walk` (mặc định ở chế độ đất bằng).
 3. Dùng joystick để đi.
 4. Xong: **L1 + X** → robot ngồi xổm, gập chân → Idle.
 
@@ -234,8 +234,8 @@ Chỉ bánh xe:  Walk ─► Docking ─► Charging ─► Undocking ─► Wal
 | Lệnh | Nút | Điều kiện | Ghi chú |
 |---|---|---|---|
 | Đổi chế độ | **R1 + →** / **R1 + ←** | Idle | |
-| Vào Prepare | **L1 + ⚠️** | Idle | Chạm đất, ngẩng đầu |
-| Đứng dậy | **L1 + ⚠️** | Prepare | Đứng dần vào `Walk` |
+| Vào Prepare | **L1 + ○** | Idle | Chạm đất, ngẩng đầu |
+| Đứng dậy | **L1 + △** | Prepare | Đứng dần vào `Walk` |
 | Homing (ngồi, gập chân) | **L1 + X** | Drive / High-Level Dev | Xong tự vào Idle |
 | Vào Idle ngay | **L1 + □** | Mọi lúc | Bỏ qua Homing, motor damping, hạ từ từ. **Chỉ dùng khẩn cấp** (VD Homing lỗi) |
 | Tiến / lùi | **Joystick trái** lên/xuống | Đang đứng | |
@@ -243,14 +243,14 @@ Chỉ bánh xe:  Walk ─► Docking ─► Charging ─► Undocking ─► Wal
 | Xoay tại chỗ | **Joystick phải** trái/phải | Đang đứng | |
 | Chỉnh chiều cao | Giữ **R1 + ↑ / ↓** | Đang đứng | Lên/xuống đều, nhả là dừng. Khởi động lại về chiều cao mặc định |
 | Đổi đất bằng ↔ cầu thang | Giữ **Share 2 s** | Đang đứng | Khuyên dùng **bánh xe** cho cầu thang. Đèn tím động = đang ở chế độ cầu thang |
-| Đứng dậy khi ngã | **L2 + ⚠️** | Đã ngã | Về lại trạng thái đứng trước khi ngã; không tác dụng khi bình thường |
+| Đứng dậy khi ngã | **L2 + △** | Đã ngã | Về lại trạng thái đứng trước khi ngã; không tác dụng khi bình thường |
 | E-Stop | Nhấn đồng thời 2 joystick | Mọi lúc | Robot mất lực, **ngã** |
 | Thoát E-Stop | Nhấn joystick phải | Đang E-Stop | Về damping |
 | Hiệu chuẩn điểm 0 | **L1 + R1** | Idle | Chỉ khi vừa nâng main controller hoặc va đập mạnh làm lệch điểm 0 |
 | Vào đế sạc | **L2 + X** | Walk, cách đế 200–650 mm | Chỉ bánh xe (mục 9) |
-| Rời đế sạc | **L2 + ⚠️** | Charging | Chỉ bánh xe |
+| Rời đế sạc | **L2 + ?** | Charging | Chỉ bánh xe — nút chưa có trong tài liệu; xem *Auto-Recharge Base User Manual* |
 
-> ⚠️ **Cần xác nhận:** Ký hiệu nút hình học (□ △ ○ …) trong PDF là hình ảnh nên không trích được. Đã xác nhận: **L1 + □ = Idle**. Ở chương trình RL mẫu (Low-Level Dev) **L1 + △ = bật đi**, **L1 + □ = tắt đi**. Các nút còn lại hãy xem bảng 4.5 trong `1795487510662_TRON_2_User_Manual.pdf` hoặc trang 3 của `1795001122079_TRON2_Biped_Wheeled_Legged_Quick_Start_V1.0_EN.pdf` rồi điền vào.
+> Ký hiệu nút theo bản web của User Manual (https://www.limxdynamics.com/en/documents/852949782845591552). Riêng nút **rời đế sạc** chưa có trong User Manual — xem *TRON 2 Auto-Recharge Base User Manual* (https://www.limxdynamics.com/en/documents/882997113569546240). Xem đầy đủ cách dùng tay cầm ở [TRON2-tay-cam.md](TRON2-tay-cam.md).
 
 ### Leo cầu thang
 
@@ -313,7 +313,7 @@ Chỉ bánh xe:  Walk ─► Docking ─► Charging ─► Undocking ─► Wal
 2. **L2 + X** → màn hình `Docking` → robot tự tiến vào, căn chỉnh, hạ xuống.
 3. Vào đế xong → `Charging`, chân chuyển damping, robot ngồi lên đế; đèn đế cam.
 4. Đầy 100% thì dừng sạc; robot ở trên đế thì đế tự duy trì đầy.
-5. Rời đế: **L2 + ⚠️** → `Undocking` → robot đứng dậy, rời đế và đứng chờ lệnh.
+5. Rời đế: **L2 + ?** (nút chưa có trong tài liệu) → `Undocking` → robot đứng dậy, rời đế và đứng chờ lệnh.
 
 > Nhấn nút mà chưa thấy phản ứng → chờ vài giây. Có nhiều đế mà chưa ghép đôi đế mặc định → robot có thể vào nhầm đế.
 

@@ -234,13 +234,13 @@ Tay và chân dùng chung 3 khớp đầu tiên tại giao diện **vai/hông**;
 | Đổi chế độ | **R1 + →** / **R1 + ←** | Idle | |
 | Về tư thế nghỉ (Home) | **L1 + X** | Chế độ Teleop / High-Level Dev | 2 tay vung ra rồi buông thõng; nếu bật bảo vệ an toàn sẽ có động tác tránh mặt bàn. Xong tự vào Idle (motor damping) |
 | Vào Idle trực tiếp | **L1 + □** | Mọi lúc | Không có động tác Home; motor damping, tay **từ từ hạ xuống**. Dùng khi Home lỗi |
-| Vào Show (demo) | **L1 + ⚠️** | Idle của chế độ Motion | Dọn sạch 1 m quanh robot trước |
-| Vào Hand Guide | **L1 + ⚠️** | Idle của chế độ Motion | Sau đó: **R1 + X** bắt đầu / dừng ghi; **R1 + ⚠️** phát lại quỹ đạo vừa ghi |
+| Vào Show (demo) | **L1 + △** | Idle của chế độ Motion | Dọn sạch 1 m quanh robot trước |
+| Vào Hand Guide | **L1 + ○** | Idle của chế độ Motion | Sau đó: **R1 + X** bắt đầu / dừng ghi; **R1 + □** phát lại quỹ đạo vừa ghi |
 | E-Stop | Nhấn đồng thời 2 joystick | Mọi lúc | |
 | Thoát E-Stop | Nhấn joystick phải | Đang E-Stop | Robot về trạng thái damping |
 | Hiệu chuẩn điểm 0 | **L1 + R1** | Idle | Chỉ khi vừa nâng cấp main controller hoặc va đập mạnh làm lệch điểm 0 |
 
-> ⚠️ **Cần xác nhận:** Ký hiệu nút hình học (□ △ ○ …) trong PDF User Manual là hình ảnh nên không trích ra được. **L1 + □ = Idle** đã được xác nhận từ tài liệu khác của LimX. Nút cho Show / Hand Guide / Replay hãy xem bảng 4.2.2 – 4.4 trong `1795487510662_TRON_2_User_Manual.pdf` rồi điền vào.
+> Ký hiệu nút theo bản web của User Manual (https://www.limxdynamics.com/en/documents/852949782845591552). Xem đầy đủ cách dùng tay cầm ở [TRON2-tay-cam.md](TRON2-tay-cam.md).
 
 ### Hiệu chuẩn điểm 0 (Zero Calibration)
 
